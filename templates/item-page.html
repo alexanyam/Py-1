@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page</title>
+</head>
+<body>
+
+<h1>Страна:{{country}} </h1><br>
+Языки:<br>
+<ol>
+{% for cn in languages %}
+<li><a href="\l2c\{{ cn}}">{{cn}} </a></li>
+{% empty %}
+Нет данных...
+{% endfor %}
+</ol>
+<div> <a href="\items\No"> К списку стран</a> <div>
+</body>
+</html>

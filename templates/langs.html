@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Языки</title>
+</head>
+<body>
+<h1>Языки</h1>
+{% for c in "ABCDEFGHIJKLMNOPQRSTUVWXYZ" %}
+<a href="\langs\{{c}}">{{c}}  |</a>
+{% endfor %}
+<a href="{% url 'langs-list' 'No' %}">Все</a>
+
+<ol>
+{% for c in langs %}
+<li><a href="\l2c\{{ c}}">{{c}} </a></li>
+    {% empty %}
+Нет данных...
+{% endfor %}
+</ol>
+</body>
+</html>

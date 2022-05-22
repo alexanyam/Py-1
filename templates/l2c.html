@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Язык стран</title>
+</head>
+<body>
+<h1>Язык: {{lang}} </h1><br>
+Страны:<br>
+<ol>
+{% for cn in country %}
+<li><a href="\item-page\{{ cn.country}}">{{cn.country}} </a></li>
+{% empty %}
+Нет данных...
+{% endfor %}
+</ol>
+<div> <a href="\langs\No"> К списку языков</a> <div>
+</body>
+</html>

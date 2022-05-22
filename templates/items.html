@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Страны</title>
+</head>
+<body>
+<h1>Страны</h1>
+
+{% for c in "ABCDEFGHIJKLMNOPQRSTUVWXYZ" %}
+<a href="\items\{{c}}">{{c}}  |</a>
+{% endfor %}
+<a href="{% url 'countries-list' 'No' %}">Все</a>
+
+<ol>
+{% for c in country %}
+<li><a href="\item-page\{{ c.country}}">{{c.country}} </a></li>
+    {% empty %}
+Нет данных...
+{% endfor %}
+</ol>
+</body>
+</html>
